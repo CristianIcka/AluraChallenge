@@ -4,7 +4,7 @@ var seccionTexto1 = document.querySelector(".texto1");
 var seccionTexto2 = document.querySelector(".texto2");
 var btnCopiar = document.querySelector(".copiar");
 
-/* Validación de texto */
+
 function validar(textoValidar){
     const letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z","Á","É","Í","Ó","Ú","á","é","í","ó","ú"];
     var conteo = 0;
@@ -22,12 +22,12 @@ function validar(textoValidar){
     return false;
 }
 
-/* Encriptación*/
+
 function encriptar() {
     var texto = entradaTexto.value;
     var salida = "";
     if(!validar(texto)){
-        alert("Texto inválido.")
+        alert("Texto no válido.")
         return;
     }
     for(var posicion = 0; posicion < texto.length; posicion++){
@@ -55,7 +55,7 @@ function encriptar() {
     ocultar();
 }
 
-/* Desencriptación */
+
 function desencriptar() {
     var texto = entradaTexto.value;
     var salida = "";
@@ -93,7 +93,6 @@ function desencriptar() {
     ocultar();
 }
 
-/* Acciones */
 function ocultar(){
     salidaTexto.style.background = "white";
     seccionTexto1.style.display = "none";
